@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>iOS 8 - Slide Effect Tag</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Roboto;
+        background: #e9ebee;
+      }
+
+      .box-item {
+        width: 100%;
+        height: 210px;
+        background: #fff;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+      }
+
+      .box-item:hover .box-item_content {
+        margin-right: -75%;
+      }
+
+      .box-item:hover .box-item-actions_item {
+        width: 250px;
+        position: relative;
+        left: unset;
+      }
+
+      .box-item_content {
+        height: 100%;
+        width: 100%;
+        background: #fff;
+        padding: 30px 50px;
+      }
+
+      .box-item_content h2 {
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .box-item_content span {
+        display: block;
+        font-weight: 400;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .box-item_actions {
+        display: flex;
+      }
+
+      .box-item-actions_item {
+        width: 0px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 25px;
+        color: #fff;
+        cursor: pointer;
+        transition: width 0.6s ease-in-out;
+        /* position: absolute; */
+        /* left: 0; */
+      }
+
+      .box-item-actions_item.more {
+        background: #c7c7cc;
+        z-index: 1;
+      }
+
+      .box-item-actions_item.archive {
+        background: #007bff;
+        z-index: 2;
+      }
+
+      .box-item-actions_item.delete {
+        background: #ff0600;
+        z-index: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box-item">
+      <div class="box-item_actions">
+        <div class="box-item-actions_item more">More</div>
+        <div class="box-item-actions_item archive">Archive</div>
+        <div class="box-item-actions_item delete">Delete</div>
+      </div>
+      <div class="box-item_content">
+        <h2>iOS 8 - iPhone</h2>
+        <span>Slide effect Tag</span>
+      </div>
+    </div>
+  </body>
+</html>
